@@ -8,7 +8,8 @@
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
             <!-- how we are connected from the JDBC - to the DB manager - to the local host or any other networked IP - to the database called test -->   
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test;" />
-            <property name="javax.persistence.jdbc.user" value="sa" />
+            <!-- setting username and password --> 
+            <property name="javax.persistence.jdbc.user" value="sa" />            
             <property name="javax.persistence.jdbc.password" value="" />
             <!-- Hibernate communicates with h2 in a dialect of SQL -->          
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
