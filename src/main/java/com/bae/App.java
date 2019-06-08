@@ -19,5 +19,9 @@ public class App {
 		//call the method in AccountRepositoryDB to persist this table
 		db.create(a);
 		
+		
+		//call the update method to change the ID to the setName
+		db.update(17, "Aysha");
+				
 	}
 }

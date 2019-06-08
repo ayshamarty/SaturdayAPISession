@@ -13,11 +13,24 @@ public class AccountRepositoryDB {
 	EntityManager manager = emf.createEntityManager();
 	EntityTransaction transaction = manager.getTransaction();
 	
-	//CREATE
+	//CREATE  manager.persist
 	public Account create(Account account) {
 		transaction.begin();
 		manager.persist(account);
 		transaction.commit();
 		return account;	
+	}
+	
+	//READ manager.find
+	
+	//DELETE manager.delete
+	
+	//UPDATE doesn't have a method for update as it doesn't need it - you just change something in create
+	public Account update(int id, String name) {
+		transaction.begin();
+		Account returned = manager.find(Account.class, id);
+		returned.setName(name);
+		transaction.commit();
+		return returned;	
 	}
 }
