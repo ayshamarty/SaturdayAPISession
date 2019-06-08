@@ -22,7 +22,7 @@ public class Account {
 	//OneToMany expects a collection and tells the compiler it's a one to many table
 	//Cascade persists any changes from account, so that you don't need to do a for each loop in the method with persist. etc
 	@OneToMany(cascade=CascadeType.PERSIST)
-	@JoinColumn
+	@JoinColumn(name = "Account_ID")
 	private Set<Task> taskSet = new HashSet<Task>();
 	
 	//default constructor
